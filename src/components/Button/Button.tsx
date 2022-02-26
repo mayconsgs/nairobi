@@ -1,6 +1,5 @@
 import React from "react";
-import styles from "./style.module.scss";
-import { ButtonProps } from "./types";
+import { ButtonProps, ButtonStyle } from ".";
 
 export const Button: React.FC<ButtonProps> = ({
   children,
@@ -8,7 +7,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = "",
   ...props
 }) => (
-  <button className={[styles[variant], className].join(" ")} {...props}>
+  <button className={[ButtonStyle[variant], className].join(" ")} {...props}>
     {children}
   </button>
 );

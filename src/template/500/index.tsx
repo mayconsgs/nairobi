@@ -3,23 +3,21 @@ import Link from "next/link";
 import { ButtonStyle } from "../../components/Button";
 import styles from "./styles.module.scss";
 
-const Error404 = () => {
+const Erro500 = () => {
   return (
-    <main className={styles.error404}>
+    <main className={styles.error500}>
       <div>
         <Image
-          priority
-          src="/img/error-404.png"
-          width={980}
+          src="/assets/error-500.svg"
+          width={1000.02}
           layout="responsive"
-          height={560}
+          height={404.59}
           objectFit="cover"
           alt="404 image"
         />
         <div>
-          <h1>Oops! This Page is Not Found.</h1>
-          <span>The requested page dose not exist.</span>
-
+          <h1>Oops! This Page is Not Working.</h1>
+          <span>The requested is Internal Server Error.</span>
           <Link href="/">
             <a className={ButtonStyle.raised}>Back to Home</a>
           </Link>
@@ -39,4 +37,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default Erro500;

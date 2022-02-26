@@ -1,0 +1,57 @@
+@use "../../styles/fonts";
+@use "../../styles/breakpoints";
+
+.error500 {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  figure {
+    align-self: flex-end;
+    margin-top: 3rem;
+    position: relative;
+
+    height: 3.5rem;
+    aspect-ratio: 212 / 56;
+
+    @media (max-width: breakpoints.$medium) {
+      height: 2.5rem;
+    }
+  }
+
+  > div {
+    max-width: 980px;
+    margin: auto 0;
+    width: 100%;
+
+    > div {
+      text-align: center;
+
+      h1 {
+        @include fonts.poppins(700);
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        font-size: 2.5rem;
+
+        @media (max-width: breakpoints.$medium) {
+          font-size: 2rem;
+        }
+      }
+
+      span {
+        @include fonts.poppins();
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        display: block;
+
+        @media (max-width: breakpoints.$medium) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
