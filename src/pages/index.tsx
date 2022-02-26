@@ -1,5 +1,3 @@
-const Home = () => {
-  return <main>HOME</main>;
-};
+import Home from "../template/Home";
 
 export default Home;
