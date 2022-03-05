@@ -1,2 +1,2 @@
-import Error404 from "../template/404";
+import Error404 from "../template/Errors/error404";
 export default Error404;

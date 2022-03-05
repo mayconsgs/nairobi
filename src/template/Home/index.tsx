@@ -1,3 +1,4 @@
+import AchivementCard from "../../components/AchivementCard/AchivementCard";
 import GameCard from "../../components/GameCard/GameCard";
 import { Sponsor } from "../../components/GameCard/GameCard.types";
 
@@ -31,6 +32,12 @@ const Home = () => {
           teamSize={4}
           sponsor={Sponsor.steam}
         />
+      </section>
+
+      <section>
+        <AchivementCard />
+        <AchivementCard />
+        <AchivementCard />
       </section>
     </main>
   );

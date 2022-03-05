@@ -1,44 +1,42 @@
 import { GameCardProps } from "./GameCard.types";
-import styles from "./GameCard.module.scss";
+import * as S from "./styles";
 
 const GameCard = ({ date, ...props }: GameCardProps) => {
   return (
-    <article className={styles.gameCard}>
-      <img src={props.imageUrl} alt={props.gameName} />
+    <S.Container>
+      <S.Image src={props.imageUrl} alt={props.gameName} />
 
-      <p>
-        <span>{date.toDateString()}</span> starting at {date.getHours()}:
-        {date.getMinutes()}
-      </p>
+      <S.DateText>
+        <S.DateRed>{date.toDateString()}</S.DateRed> starting at{" "}
+        {date.getHours()}:{date.getMinutes()}
+      </S.DateText>
 
-      <h3>{props.gameName}</h3>
+      <S.h3>{props.gameName}</S.h3>
 
-      <div>
-        <div>
-          <h6>Prize</h6>
-          <p>
-            <img src="/assets/trofeu.svg" alt="" />
-            <span>{props.prize}</span>
-          </p>
-        </div>
-        <div>
-          <h6>Team Size</h6>
-          <p>
-            <img src="/assets/x.svg" alt="" />
-            <span>
-              {props.teamSize} vs {props.teamSize}
-            </span>
-          </p>
-        </div>
-        <div>
-          <h6>Sponsor</h6>
-          <p>
-            <img src="/assets/steam.svg" alt="" />
-            <span>{props.sponsor}</span>
-          </p>
-        </div>
-      </div>
-    </article>
+      <S.PropsContainer>
+        <S.Props>
+          <S.PropsTitle>Prize</S.PropsTitle>
+          <S.PropsText>
+            <S.PropsIcon src="/assets/trofeu.svg" alt="" />
+            {props.prize}
+          </S.PropsText>
+        </S.Props>
+        <S.Props>
+          <S.PropsTitle>Team Size</S.PropsTitle>
+          <S.PropsText>
+            <S.PropsIcon src="/assets/x.svg" alt="" />
+            {props.teamSize} vs {props.teamSize}
+          </S.PropsText>
+        </S.Props>
+        <S.Props>
+          <S.PropsTitle>Sponsor</S.PropsTitle>
+          <S.PropsText>
+            <S.PropsIcon src="/assets/steam.svg" alt="" />
+            {props.sponsor}
+          </S.PropsText>
+        </S.Props>
+      </S.PropsContainer>
+    </S.Container>
   );
 };
 

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ButtonStyle } from "../../components/Button";
-import styles from "./styles.module.scss";
+import { Button } from "../../components/Button";
+import * as S from "./style";
 
 const Error404 = () => {
   return (
-    <main className={styles.error404}>
-      <div>
+    <S.Container>
+      <S.Content>
         <Image
           priority
           src="/img/error-404.png"
@@ -16,26 +16,25 @@ const Error404 = () => {
           objectFit="cover"
           alt="404 image"
         />
-        <div>
-          <h1>Oops! This Page is Not Found.</h1>
-          <span>The requested page dose not exist.</span>
+        <S.TextContainer>
+          <S.Title>Oops! This Page is Not Found.</S.Title>
+          <S.Description>The requested page dose not exist.</S.Description>
 
           <Link href="/">
-            <a className={ButtonStyle.raised}>Back to Home</a>
+            <Button as="a">Back to Home</Button>
           </Link>
-        </div>
-      </div>
+        </S.TextContainer>
+      </S.Content>
 
-      <figure>
+      <S.LogoContainer>
         <Image
-          className={styles.logo}
           src="/assets/nairobi-logo.svg"
           layout="fill"
           objectFit="contain"
           alt="Nairobi logo"
         />
-      </figure>
-    </main>
+      </S.LogoContainer>
+    </S.Container>
   );
 };
 
