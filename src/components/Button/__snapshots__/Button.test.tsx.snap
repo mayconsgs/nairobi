@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> render Button 1`] = `
+<div>
+  <button
+    class="sc-bdvvtL eqrBTb"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<Button /> render Outline Button 1`] = `
+<div>
+  <button
+    class="sc-bdvvtL eGTWdX"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<Button /> render Raised Button 1`] = `
+<div>
+  <button
+    class="sc-bdvvtL eqrBTb"
+  >
+    Button
+  </button>
+</div>
+`;
