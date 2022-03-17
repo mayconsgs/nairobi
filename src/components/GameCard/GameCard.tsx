@@ -1,5 +1,5 @@
-import { GameCardProps } from "./GameCard.types";
-import * as S from "./styles";
+import * as S from ".";
+import { GameCardProps } from ".";
 
 const GameCard = ({ date, ...props }: GameCardProps) => {
   return (

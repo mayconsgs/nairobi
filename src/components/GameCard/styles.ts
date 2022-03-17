@@ -8,7 +8,6 @@ export const Container = styled.article`
 `;
 
 export const Image = styled.img`
-  aspect-ratio: 324 / 201;
   width: 100%;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
